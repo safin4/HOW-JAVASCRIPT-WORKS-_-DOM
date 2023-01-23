@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+ 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explore DOM</title>
+        <style>
+             article{
+                border: 2px solid tomato;
+                border-radius: 20px;
+                margin: 10px;
+                padding: 10px;
+             }
+
+             .special h3 {}
+        </style>
+
+    </head>
+
+    <body> 
+      
+       <main>
+        <section>
+            <h3>Exploring DOM</h3>
+            <article style = "border-color: black;">
+                <h3>article-1</h3>
+                <p title="I am a most important Author" class="author" id="bestSeller">author-1</p>
+                <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis in reiciendis molestiae provident ab sunt ex rerum veniam vero, itaque sapiente magnam eos eaque tempora debitis ducimus dolorum amet veritatis.</p>
+            </article>
+            <article style = "border-color: black;" class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Dicta id, soluta dolores aspernatur quod ullam veniam quia deserunt placeat? Facilis accusantium blanditiis optio nam exercitationem sequi, modi consectetur deserunt ab enim excepturi dolorum voluptas eaque perspiciatis, dolor deleniti.</p>
+            </article>
+            <article style = "border-color: black;" class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Necessitatibus quasi quisquam sapiente obcaecati, distinctio nulla reiciendis nesciunt odio velit aspernatur commodi exercitationem facere maxime earum cum, minima ipsa blanditiis eos culpa unde sed praesentium tempora quam? Provident, libero!</p>
+            </article>
+        </section>
+       </main>
+               
+       <script>
+
+             document.body.style.backgroundColor = "red";
+             var authors = document.querySelectorAll(".special h3");
+             for (var i = 0; i < authors.length; i++) {
+                var element = authors[i];
+                //console.log(element.innerHTML);
+                element.innerHTML = "Lekhok - " + (i + 1);
+                element.setAttribute("title", "All Author is same");
+                element.style.backgroundColor = "lightblue";
+                element.style.margin = "10px"; 
+             }
+
+       </script>
+        
+    </body>
+
+</html>
